@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+body {
+    display: grid;
+}
+header {
+    background: #262427;
+    text-align: center;
+}
+header img {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+}
+header h2 {
+    color: #e7ab47;
+    font-size: 2.5em;
+    padding-top: 30px;
+}
+header p {
+    color: #a8a7a9;
+    padding-bottom: 40px;
+}
+.date {
+    height: 100px;
+    width: 100%;
+    background: url("https://europe.wordcamp.org/2017/files/2017/01/background-pattern-01.png");
+}
+h3 {
+    font-size: 2.5em;
+    color: #404040;
+    line-height: 100px;
+    text-align: center;
+}
+main {
+    background: #fff;
+    color: #404040;
+    padding: 30px;
+}
+.item {
+    border-bottom: 1px dotted black;
+}
+.item h4 {
+    font-size: 2.5em;
+    padding-top: 30px;
+}
+.item p {
+    padding: 10px 0;
+}
+.item p:nth-of-type(even) {
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.item:nth-last-of-type(1) {
+    border-bottom: none;
+}
+nav {
+    text-align: center;
+    line-height: 125px;
+    background: #262427;
+}
+nav li {
+    list-style: none;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 30px;
+    line-height: 1.2;
+}
+nav li:nth-of-type(1) {
+    background: #f1e4d5;
+}
+nav li:nth-of-type(2) {
+    background: #e7ab47;
+    color: white;
+}
+nav li:nth-of-type(3) {
+    background: #68470c;
+    color: white;
+}
+nav li:nth-of-type(4) {
+    background: #cc9965;
+    color: white;
+}
+footer {
+    background: #262427;
+    color: #ffffff;
+    padding: 30px;
+}
+footer h2 {
+    padding: 30px 0;
+    font-size: 2.5em;
+}
+footer p {
+    font-style: italic;
+}
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        font-size: 0.6em;
+    }
+    .date {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+    header {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    main {
+        grid-column: 1;
+        grid-row: span 8;
+    }
+    nav {
+        grid-column: 2;
+        grid-row: span 7;
+    }
+    footer {
+        grid-column: span 2;
+        grid-row: 10;
+    }
+}
+@media (min-width: 1000px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        font-size: 0.6em;
+    }
+    .date {
+        grid-row: 1;
+        grid-column: span 3;
+    }
+    header {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+    main {
+        grid-column: 1;
+        grid-row: span 8;
+    }
+    nav {
+        grid-column: 2;
+        grid-row: span 10;
+    }
+    footer {
+        grid-column: 3;
+        grid-row: 3 / span 10;
+    }
+}
